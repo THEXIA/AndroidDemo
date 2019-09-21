@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定义了使用xml的版本与编码的样式 -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.jiexia.demo">
+
+    <!-- 定义了使用的架构来源，定义了程序所在包，包名是应用的唯一标识 -->
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <!--
+             1.是否允许备份
+             2.定义应用程序的图标，引用了mipmap中的ic_launcher
+             3.定义应用的名称，引用了string里的app_name
+             4.圆形图标
+             5.使用从右到左的布局
+             6.所使用的主题，app当前的风格
+        -->
+        <activity
+                android:name=".MainActivity"
+                android:label="@string/app_name"
+                android:screenOrientation="sensor"
+                android:theme="@style/AppTheme.NoActionBar">
+            <!--
+                 1.activity声明，包括所在包和app的名称，com.example.jiexia.demo可以用 '.' 来表示
+                 2.activity名称，显示给用户看的
+                 3.activity的风格
+                 4.当前activity由物理感应器决定横竖屏显示 ：
+                 landscape - 横屏  ， portrait - 竖屏  ，  sensor  -  由物理感应器决定  ，  nosensor  -  忽略物理感应器
+            -->
+            <intent-filter> <!-- 意图过滤器？ -->
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <!-- 这两个代码决定程序的入口，且app会被显示在Home的应用程序列表中 -->
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".Main2Activity"
+                android:label="@string/title_activity_main2"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+    </application>
+
+</manifest>

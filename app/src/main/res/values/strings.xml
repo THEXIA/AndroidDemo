@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">demo</string>
+    <string name="app_name">AndroidDemo</string>
     <string name="action_settings">Settings</string>
     <string name="switch_1">选择</string>
     <string name="button_done">确定</string>
     <string name="button_cancle">取消</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="info">关注:https://github.com/THEXIA/AndroidDemo/tree/master/apk ,也许会有更新哦(=^-ω-^=)</string>
 </resources>

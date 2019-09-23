@@ -23,17 +23,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_done"
-            android:layout_marginTop="13dp"
-            app:layout_constraintTop_toBottomOf="@+id/editText" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="60dp" android:layout_marginStart="60dp"/>
+            android:layout_marginTop="328dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="56dp" android:layout_marginStart="56dp"
+            app:layout_constraintTop_toTopOf="parent"/>
     <Button
             android:text="@string/button_cancle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_cancel"
-            android:layout_marginTop="13dp"
-            app:layout_constraintTop_toBottomOf="@+id/editText" android:layout_marginEnd="60dp"
-            android:layout_marginRight="60dp" app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_marginTop="328dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginRight="56dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
             android:layout_width="wrap_content"
@@ -43,17 +45,17 @@
             android:hint="请输入任意字符"
             android:id="@+id/editText"
             android:singleLine="false"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="89dp"
-            android:layout_marginStart="89dp" android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"/>
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="84dp"
+            android:layout_marginStart="84dp" android:layout_marginTop="260dp"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
             android:layout_width="121dp"
             android:layout_height="135dp" app:srcCompat="@drawable/c6219"
             android:id="@+id/imageView2"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="130dp" android:layout_marginStart="130dp" android:layout_marginTop="13dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView"/>
+            android:layout_marginLeft="132dp" android:layout_marginStart="132dp" android:layout_marginTop="112dp"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
             android:text="@string/info"
@@ -62,8 +64,8 @@
             android:id="@+id/textView4"
             android:autoLink="web"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="16dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="25dp" android:layout_marginStart="25dp"/>
+            android:layout_marginBottom="28dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="24dp" android:layout_marginStart="24dp"/>
 
 
 </android.support.constraint.ConstraintLayout>

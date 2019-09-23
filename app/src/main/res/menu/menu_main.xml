@@ -2,8 +2,17 @@
       xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:tools="http://schemas.android.com/tools"
       tools:context="com.example.jiexia.demo.MainActivity">
-    <item android:id="@+id/action_settings"
+    <item android:id="@+id/action_settings1"
           android:title="@string/action_settings"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+
+    <item android:id="@+id/action_settings2"
+          android:title="About"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+    <item android:id="@+id/action_settings3"
+          android:title="Exit"
           android:orderInCategory="100"
           app:showAsAction="never"/>
 </menu>

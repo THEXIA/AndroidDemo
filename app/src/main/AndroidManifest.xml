@@ -6,7 +6,7 @@
     <!-- 定义了使用的架构来源，定义了程序所在包，包名是应用的唯一标识 -->
     <application
             android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/icon3"
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"

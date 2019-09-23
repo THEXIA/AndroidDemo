@@ -24,6 +24,13 @@ public class Main2Activity extends AppCompatActivity {
     private RadioGroup radioGroup;
     private static RadioButton radioButton = null; //用于存放临时选择的radioGroup的值
     private Button button_intent;
+
+    private SeekBar seekBar;//拖动条
+    private TextView textView_seek;
+    private ProgressBar progressBar;
+
+    private RatingBar ratingBar;//评星
+
     //---------------------------
     //保持所启动的Service的IBinder对象,同时定义一个ServiceConnection对象
     private MyService1.MyBinder binder;
@@ -129,6 +136,35 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
+        seekBar = findViewById(R.id.seekBar);//拖动条
+        textView_seek = findViewById(R.id.textView_seek);
+        progressBar = findViewById(R.id.progressBar2);//进度条
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) { //进度条发生改变触发 progress进度值
+                textView_seek.setText("当前进度值:"+progress);
+                progressBar.setProgress(progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) { //按住触发
+                Toast.makeText(getApplicationContext(), "按住了进度条", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) { //放开触发
+                Toast.makeText(getApplicationContext(), "放开了进度条", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                //ratingBar.getNumStars();//评星条的最大值
+                Toast.makeText(getApplicationContext(), "评星条为:"+ratingBar.getRating(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
 //        //右下角信封按钮
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -140,5 +176,7 @@ public class Main2Activity extends AppCompatActivity {
 //            }
 //        });
     }
+
+
 
 }

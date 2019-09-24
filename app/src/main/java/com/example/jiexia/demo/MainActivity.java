@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -17,6 +18,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Toolbar toolbar;
+    private EditText editText;
+    private Button button_done;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) { //创建和初始化
         System.out.println("MainActivity被创建!");
@@ -24,12 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main); //绑定activity和布局
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);//右上角的
+        toolbar = (Toolbar) findViewById(R.id.toolbar);//右上角的
         setSupportActionBar(toolbar);
 
-        final EditText editText = (EditText) findViewById(R.id.editText); //文本输入框对象
+        editText = (EditText) findViewById(R.id.editText); //文本输入框对象
 
-        Button button_done = (Button) findViewById(R.id.button_done); //获取 确定按钮 对象
+        button_done = (Button) findViewById(R.id.button_done); //获取 确定按钮 对象
         button_done.setOnClickListener(new View.OnClickListener() { //绑定点击事件
             @Override
             public void onClick(View view) {
@@ -121,7 +126,9 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings1) { //setting
-            return true;
+            startActivity(new Intent(MainActivity.this,Main4Activity.class)); //跳转到Main4Activity
+            overridePendingTransition(R.anim.anim_in,R.anim.anim_out);//淡入淡出
+            onStop();
         }
         if (id == R.id.action_settings2) { //about
             Toast.makeText(getApplicationContext(),"https://github.com/THEXIA/AndroidDemo/tree/master/apk",Toast.LENGTH_LONG).show();

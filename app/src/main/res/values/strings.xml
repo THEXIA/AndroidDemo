@@ -4,6 +4,8 @@
     <string name="switch_1">选择</string>
     <string name="button_done">确定</string>
     <string name="button_cancle">取消</string>
-    <string name="title_activity_main2">Main2Activity</string>
-    <string name="info">关注:https://github.com/THEXIA/AndroidDemo/tree/master/apk ,也许会有更新哦(=^-ω-^=)</string>
+    <string name="info">源码地址:https://github.com/THEXIA/AndroidDemo ,也许会有更新哦(=^-ω-^=)</string>
+    <string name="title_activity_main3">界面3</string>
+    <string name="title_activity_main4">界面4</string>
+    <string name="title_activity_main5">界面5</string>
 </resources>

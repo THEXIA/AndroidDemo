@@ -10,7 +10,7 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme.NoActionBar">
 
         <!--
              1.是否允许备份
@@ -18,13 +18,14 @@
              3.定义应用的名称，引用了string里的app_name
              4.圆形图标
              5.使用从右到左的布局
-             6.所使用的主题，app当前的风格
+             6.所使用的主题，app当前的风格 无标题栏
         -->
         <activity
                 android:name=".MainActivity"
                 android:label="@string/app_name"
+                android:theme="@style/AppTheme.NoActionBar"
                 android:screenOrientation="sensor"
-                android:theme="@style/AppTheme.NoActionBar">
+                >
 
             <!--
                  1.activity声明，包括所在包和app的名称，com.example.jiexia.demo可以用 '.' 来表示
@@ -42,7 +43,6 @@
         </activity>
         <activity
                 android:name=".Main2Activity"
-                android:label="@string/title_activity_main2"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
@@ -54,14 +54,26 @@
                 <action android:name="com.example.jiexia.demo.Service.MyService1"/>
             </intent-filter>
         </service>
-
         <service
                 android:name=".Service.MyIntentService1"
                 android:exported="false">
-            <intent-filter >
+            <intent-filter>
                 <action android:name="com.example.jiexia.demo.Service.MyIntentService1"/>
             </intent-filter>
         </service>
+
+        <activity
+                android:name=".Main3Activity"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".Main4Activity"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".Main5Activity"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

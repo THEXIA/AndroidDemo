@@ -14,7 +14,6 @@ import com.example.jiexia.demo.Service.MyService1;
 
 public class Main2Activity extends AppCompatActivity {
 
-    private Toolbar toolbar;
     private TextView textView;
 
     private Button button_bind;
@@ -30,6 +29,8 @@ public class Main2Activity extends AppCompatActivity {
     private ProgressBar progressBar;
 
     private RatingBar ratingBar;//评星
+
+    private Button button_cont;//继续
 
     //---------------------------
     //保持所启动的Service的IBinder对象,同时定义一个ServiceConnection对象
@@ -61,8 +62,6 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);//绑定 activity_main2.xml
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         it2 = getIntent();
         textView = (TextView)findViewById(R.id.textView2);
         textView.setText("你输入的是:"+ it2.getStringExtra("text") );
@@ -166,15 +165,17 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
-//        //右下角信封按钮
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        button_cont = (Button)findViewById(R.id.button_cont);
+
+        button_cont.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Main2Activity.this,Main3Activity.class));//启动activity3
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);//淡入淡出
+                onStop();//停止当前
+            }
+        });
+
     }
 
 

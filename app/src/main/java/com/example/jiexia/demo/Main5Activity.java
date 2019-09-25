@@ -1,5 +1,6 @@
 package com.example.jiexia.demo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -59,7 +60,9 @@ public class Main5Activity extends AppCompatActivity {
         button_cont3.setOnClickListener(new View.OnClickListener() { //继续
             @Override
             public void onClick(View v) {
-                return;
+                startActivity(new Intent(Main5Activity.this,Main6Activity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out); //淡入淡出
+                onStop();
             }
         });
 

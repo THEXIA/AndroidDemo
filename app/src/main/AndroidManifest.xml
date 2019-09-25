@@ -23,9 +23,8 @@
         <activity
                 android:name=".MainActivity"
                 android:label="@string/app_name"
-                android:theme="@style/AppTheme.NoActionBar"
                 android:screenOrientation="sensor"
-                >
+                android:theme="@style/AppTheme">
 
             <!--
                  1.activity声明，包括所在包和app的名称，com.example.jiexia.demo可以用 '.' 来表示
@@ -72,6 +71,11 @@
         </activity>
         <activity
                 android:name=".Main5Activity"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".Main6Activity"
+                android:label="@string/title_activity_main6"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>

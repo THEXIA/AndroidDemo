@@ -22,7 +22,7 @@
             android:id="@+id/list_test2"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="92dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="148dp"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"/>
     <Button
@@ -30,16 +30,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_cont2"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="60dp"
-            android:layout_marginStart="60dp"/>
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="64dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="56dp"
+            android:layout_marginStart="56dp"/>
     <Button
             android:text="返回"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_back2"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"
-            android:layout_marginEnd="60dp" android:layout_marginRight="60dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="64dp"
+            android:layout_marginEnd="56dp" android:layout_marginRight="56dp"
             app:layout_constraintEnd_toEndOf="parent"/>
     <!-- android:entries="@array/myarray" 绑定values/arrays.xml 里的myarray的值到ListView-->
 </android.support.constraint.ConstraintLayout>

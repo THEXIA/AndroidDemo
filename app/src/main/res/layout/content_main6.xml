@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/activity_main6"
+        tools:context=".Main6Activity">
+
+    <ListView
+            android:layout_width="0dp"
+            android:layout_height="339dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="8dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            android:id="@+id/list_test6" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.311"/>
+    <Button
+            android:text="添加一条记录"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_additem"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"/>
+    <Button
+            android:text="删除最后一条"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_delend" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@+id/button_additem" android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"/>
+    <Button
+            android:text="删除所有记录"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_delall"
+            app:layout_constraintStart_toEndOf="@+id/button_delend" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" android:layout_marginLeft="4dp" android:layout_marginStart="4dp"/>
+    <!--
+    footerDividersEnabled:是否在footerView(表尾)前绘制一个分隔条,默认为true
+    headerDividersEnabled:是否在headerView(表头)前绘制一个分隔条,默认为true
+    divider:设置分隔条,可以用颜色分割,也可以用drawable资源分割
+    dividerHeight:设置分隔条的高度
+    -->
+</android.support.constraint.ConstraintLayout>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
         tools:context=".MainActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -22,6 +23,7 @@
     </android.support.design.widget.AppBarLayout>
     <!-- app的风格布局 -->
 
+
     <include layout="@layout/content_main"/>
     <!-- 这里包含了layout下的content_main.xml布局文件 -->
 
@@ -34,4 +36,4 @@
             android:layout_margin="@dimen/fab_margin"
             app:srcCompat="@android:drawable/ic_dialog_email"/>
      app右下脚的信封 -->
-</android.support.design.widget.CoordinatorLayout>
+</android.support.constraint.ConstraintLayout>

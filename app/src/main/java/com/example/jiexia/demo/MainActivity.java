@@ -3,8 +3,6 @@ package com.example.jiexia.demo;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -18,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private EditText editText;
     private Button button_done;
+
+    private Button button_gird;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { //创建和初始化
@@ -80,15 +80,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);//获取右下角的信封按钮
-//        fab.setOnClickListener(new View.OnClickListener() { //绑定点击事件
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
+        button_gird = (Button)findViewById(R.id.button_gird);
+        button_gird.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,Main7Activity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);//淡入淡出
+                onStop();
+            }
+        });
     }
 
     @Override
